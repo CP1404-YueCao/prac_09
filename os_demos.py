@@ -55,5 +55,5 @@ def demo_walk():
         # TODO: add a loop to rename the files
 
 
-main()
-# demo_walk()
+# main()
+demo_walk()
