@@ -14,12 +14,11 @@ def main():
         if extension not in extension_of_category:
             category = input(f"What category would you like yo sort {extension} files into? ")
             extension_of_category[extension] = category
-        try:
-            os.mkdir(extension)
-        except FileExistsError:
-            pass
-        print(f"{extension}/{filename}")
-        os.rename(filename, f"{extension}/{filename}")
+            try:
+                os.mkdir(category)
+            except FileExistsError:
+                pass
+        os.rename(filename, f"{extension_of_category[extension]}/{filename}")
 
 
 main()
